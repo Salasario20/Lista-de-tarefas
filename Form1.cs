@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
 
-       public List<string> tasksToDoList = new List<string>(){"Carlos", "Ana", "Joao"};
+       public List<string> tasksToDoList = new List<string>(){"Usar a lista"};
         public void RefreshFlowLayoutPanel1(){
             flowLayoutPanel1.Controls.Clear();
         }
@@ -26,9 +26,9 @@ namespace WindowsFormsApp1
 
                 taskLabel.Text = tasksToDoList[i];
                 taskLabel.AutoSize = true;
-                taskLabel.Font = new Font("Arial", 12, FontStyle.Regular);
+                taskLabel.Font = new Font("Arial", 15, FontStyle.Regular);
 
-                buttonDeleteTask.Text = "X";
+                buttonDeleteTask.Text = "✔";
                 buttonDeleteTask.Tag = tasksToDoList[i];
                 buttonDeleteTask.Click += ButtonDeleteTask_Click;
                 flowLayoutPanel1.SetFlowBreak(buttonDeleteTask, true);
